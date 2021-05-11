@@ -1,0 +1,182 @@
+:root {
+  /* Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --bright-orange-hover: hsl(31, 81%, 44%);
+
+  /* Neutral */
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs*/
+  --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons*/
+
+  --font-size: 15px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mobile view */
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--very-light-gray);
+  padding-bottom: 1.5rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.6;
+  font-size: var(--font-size);
+  padding-bottom: 1.5rem;
+}
+
+p,
+.btn {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white);
+}
+
+.btn {
+  width: fit-content;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  background: var(--very-light-gray);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  margin: 0 40px;
+  max-width: 35ch;
+  min-width: 30ch;
+}
+
+.svg {
+  width: 4rem;
+  padding-bottom: 1.5rem;
+}
+
+.sedan,
+.suv,
+.luxury {
+  padding: 2rem;
+}
+
+.sedan {
+  background: var(--bright-orange);
+  margin-top: 6rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.sedan .btn {
+  color: var(--bright-orange);
+}
+
+.suv {
+  background: var(--dark-cyan);
+}
+
+.suv .btn {
+  color: var(--dark-cyan);
+}
+
+.luxury {
+  background: var(--very-dark-cyan);
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 6rem;
+}
+
+.luxury .btn {
+  color: var(--very-dark-cyan);
+}
+
+/* Medium Size Screens (tablet) */
+@media (min-width: 641px) {
+  .container {
+    margin: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    justify-content: center;
+    padding: 5rem;
+    max-width: 50ch;
+  }
+
+  .svg {
+    width: 8rem;
+  }
+}
+
+/* Large Size Screens (laptop / desktop) */
+@media (min-width: 1008px) {
+  .container {
+    justify-content: center;
+    flex-direction: row;
+    margin: 12rem 5rem;
+  }
+
+  .card {
+    margin: 0;
+    justify-content: center;
+    padding: 3rem 3rem;
+    max-width: 35ch;
+    flex-shrink: 0;
+  }
+
+  .svg {
+    margin-bottom: 1rem;
+  }
+
+  .sedan {
+    border-radius: 10px 0 0 10px;
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 3rem;
+  }
+
+  .luxury {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .sedan .btn:hover {
+    background: var(--bright-orange-hover);
+    color: var(--very-light-gray);
+  }
+  .suv .btn:hover {
+    background: var(--very-dark-cyan);
+    color: var(--very-light-gray);
+  }
+  .luxury .btn:hover {
+    background: var(--dark-cyan);
+    color: var(--very-light-gray);
+  }
+}
+/* Attributions */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
